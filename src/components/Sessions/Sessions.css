@@ -1,0 +1,12 @@
+/* add CSS for Session list */
+.sessions {
+    display: flex;
+    flex-direction: column;
+}
+
+.session_list {
+    background-color: rgb(210, 196, 196);
+    border: 2px solid rgb(40, 1, 1);
+    padding: 0.7rem;
+    margin: 0.5rem 0 ;
+}
