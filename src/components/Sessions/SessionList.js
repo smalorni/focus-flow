@@ -7,7 +7,7 @@ export const SessionList = ({ searchTermState }) => {
     //set state with initial value of empty array
     const [sessions, setSessions] = useState([])
     //set state when a user type in and erase search, needs to return original list
-    const [filteredSessions, setFilteredSession] = useState ([]) 
+    const [filteredSessions, setFilteredSessions] = useState ([]) 
     const navigate = useNavigate()
 
     /*const localFlowUser = localStorage.getItem("flow_user")
@@ -34,7 +34,19 @@ export const SessionList = ({ searchTermState }) => {
             fetch(`http://localhost:8088/sessions?_expand=eventType`)
             .then(response => response.json())
             .then((sessionArray) => { 
-                 setFilteredSession(sessionArray)//passes what you want the new value to be
+                 setFilteredSessions(sessionArray)//passes what you want the new value to be
+            })
+        },
+        [sessions] //when this array is empty, you are observing initial component state
+
+    )
+
+    useEffect(
+        () => {
+            fetch(`http://localhost:8088/sessions?_expand=eventType`)
+            .then(response => response.json())
+            .then((sessionArray) => { 
+                 setSessions(sessionArray)//passes what you want the new value to be
             })
         },
         [] //when this array is empty, you are observing initial component state
@@ -47,7 +59,7 @@ export const SessionList = ({ searchTermState }) => {
             const searchedSessions = sessions.filter(session => {
             return session.clientName.toLowerCase().startsWith(searchTermState.toLowerCase())
             })
-        setFilteredSession(searchedSessions)
+        setFilteredSessions(searchedSessions)
     },
         [ searchTermState ]
 )
@@ -64,7 +76,7 @@ export const SessionList = ({ searchTermState }) => {
                 ((session) => {
                 return <>
                 
-                <section className="session_list">
+                <section className="session_list" key={`session--${session.id}`}>
                         
                             <div className="date">Date: {new Date (session.date).toLocaleDateString()}</div>
                             <div className="location">Location: {session.location}</div>
