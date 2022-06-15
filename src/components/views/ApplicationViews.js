@@ -1,6 +1,8 @@
 import { Outlet, Route, Routes } from "react-router-dom";
-//import { SessionForm } from "../Sessions/SessionForm";
-import { SessionList } from "../Sessions/SessionList";
+import { SessionContainer } from "../Sessions/SessionContainer";
+import { SessionForm } from "../Sessions/SessionForm";
+import { SessionSearch } from "../Sessions/SessionSearch";
+//import { SessionEdit } from "../Sessions/SessionEdit";
 
 export const ApplicationViews = () => {
     return <Routes>
@@ -10,10 +12,14 @@ export const ApplicationViews = () => {
                     <Outlet />
                 </>
             }>    
-                <Route path="sessions" element={ <SessionList /> } />
+                <Route path="sessions" element={ <SessionContainer /> } />
+                <Route path="session/create" element={ <SessionForm />} />
+                <Route path="sessions" element={ <SessionSearch />} />
+                
+                
                 
             </Route>
     </Routes>
 }
 
-/* <Route path="session/add" element={ <SessionForm />} /> */
+//<Route path="sessions/:sessionId/edit" element={ <SessionEdit />} />

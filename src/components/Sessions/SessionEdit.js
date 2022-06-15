@@ -1,79 +1,58 @@
-import { useEffect, useState } from "react";
-import { useNavigate } from "react-router-dom";
+/*import { useEffect, useState } from "react"
+import { useNavigate, useParams } from "react-router-dom"
+export const SessionEdit = () => {
+    const { sessionId } = useParams()
 
-//Goal: create a form, for creating new objects. Once POST operation is completed, navigate user back to list of all sessions.
+    const [session, editSession] = useState({
+            date: "",
+            location: "",
+            clientName: "",
+            email: "",
+            eventTypeId: "",
+            notes: "",
+          })
+       
+    
+    const navigate = useNavigate()
 
-export const SessionForm = () => {
-  const [session, updateSession] = useState({
-    date: "",
-    location: "",
-    clientName: "",
-    email: "",
-    eventTypeId: "",
-    notes: "",
-  })
-  
- const navigate = useNavigate()
+    //fetch sessions data
+    useEffect(() => {
+        fetch(`http://localhost:8088/sessions`)
+            .then(response => response.json())
+            .then((data) => {
+                editSession(data)
+            })
+    }, [sessionId])
 
-  const [eventTypes, setEventTypes] = useState([])
+    const handleSaveButtonClick = (event) => {
+        event.preventDefault()
 
-  /*const localFlowUser = localStorage.getItem("flow_user")
-  const flowUserObject = JSON.parse(localFlowUser)*/
-
-
-
-    //Create object to be saved to API
-   
-
-    //Fetch existing data
-
-   useEffect(() => {
-      fetch(`http://localhost:8088/eventTypes`)
-        .then((response) => response.json())
-        .then((eventTypeArray) => {
-          setEventTypes(eventTypeArray)
+        return fetch(`http://localhost:8088/sessions/${session.Id}`, {
+            method: "PUT",
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify(session)
         })
-    }, 
-        []
+            .then(response => response.json())
+            .then(() => {
+                navigate("/sessions")
+            })
+    }
+
+    //useEffect (
+        () => {
+            getEditRequests(requestId)
+            .then (updateRequest)
+        },
+        [requestId]
     )
 
-      //submit button
-  const handleSaveButtonClick = (event) => {
-    event.preventDefault()
 
-      
-    //Need send data to API
-
-      const sessionToSendToAPI = {
-        date: new Date(session.date).toLocaleDateString(),
-        location: session.location,
-        clientName: session.clientName,
-        email: session.email,
-        eventTypeId: parseInt(session.eventTypeId),
-        notes: session.notes,
-      }
-      //Post request to JSON server, when completed, navigate user back to session list - route found in application views.js
-
-      return fetch(`http://localhost:8088/sessions`, {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify(sessionToSendToAPI),
-      })
-        .then((response) => response.json())
-        .then(() => {
-          navigate("/sessions"); //same as shown in application views
-        })
-    };
-
-    //Date, Location, Client's Name, Email, EventTypeId, notes
-
-    return (
-      <form className="sessionForm">
-        <h2 className="sessionForm_title">New Photo Session Form</h2>
+    return <form className="editForm">
+        <h2 className="editForm__title">Photo Session</h2>
         <fieldset>
-          <div className="form-group" key={session.id}>
+        <div className="form-group">
             <label htmlFor="date">Date of Session:</label>
             <input
               required
@@ -85,14 +64,14 @@ export const SessionForm = () => {
               onChange={(evt) => {
                 const copy = { ...session }; //created a copy of existing state
                 copy.date = evt.target.value; //to modify
-                updateSession(copy)
+                editSession(copy)
               }}
             />
           </div>
         </fieldset>
 
         <fieldset>
-          <div className="form-group" key={session.id}>
+          <div className="form-group">
             <label htmlFor="location">Location of Session:</label>
             <input
               required
@@ -104,7 +83,7 @@ export const SessionForm = () => {
               onChange={(evt) => {
                 const copy = { ...session }; //created a copy of existing state
                 copy.location = evt.target.value; //to modify
-                updateSession(copy)
+                editSession(copy)
               }}
             />
           </div>
@@ -123,7 +102,7 @@ export const SessionForm = () => {
               onChange={(evt) => {
                 const copy = { ...session }; //created a copy of existing state
                 copy.clientName = evt.target.value; //to modify
-                updateSession(copy)
+                editSession(copy)
               }}
             />
           </div>
@@ -142,7 +121,7 @@ export const SessionForm = () => {
               onChange={(evt) => {
                 const copy = { ...session }; //created a copy of existing state
                 copy.email = evt.target.value; //to modify
-                updateSession(copy)
+                editSession(copy)
               }}
             />
           </div>
@@ -155,7 +134,7 @@ export const SessionForm = () => {
               onChange={(evt) => {
                 const copy = { ...session }; //created a copy of existing state
                 copy.eventTypeId = parseInt(evt.target.value) //to modify
-                updateSession(copy)
+                editSession(copy)
               }}
             >
               <option key={0}>Select An Event Type</option>
@@ -176,15 +155,17 @@ export const SessionForm = () => {
               onChange={(evt) => {
                 const copy = { ...session }; //created a copy of existing state
                 copy.notes = evt.target.value; //to modify
-                updateSession(copy)
+                editSession(copy)
               }}
             />
           </div>
         </fieldset>
+            
 
-        <button onClick={(clickEvent) => handleSaveButtonClick(clickEvent)}>
-          Submit Session
+        <button
+            onClick={(clickEvent) => handleSaveButtonClick(clickEvent)}
+            className="edit-btn">
+            Save
         </button>
-      </form>
-    )
-  }
+    </form>
+}*/
