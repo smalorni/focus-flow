@@ -52,11 +52,14 @@ export const SessionList = ({ searchTermState }) => {
 
     )
 
-    //Need useEffect for searchState - to search for certain sessions
+    //Need useEffect for searchState - to search for certain sessions. For event type, need to repeat event type to access value below to be able to search by event.
     useEffect(
         () => {
             const searchedSessions = sessions.filter(session => {
-            return session.clientName.toLowerCase().startsWith(searchTermState.toLowerCase())
+            return session.clientName.toLowerCase().includes(searchTermState.toLowerCase()) ||
+            session.eventType.eventType.toLowerCase().startsWith(searchTermState.toLowerCase()) ||
+            session.date.toLowerCase().includes(searchTermState.toLowerCase()) || 
+            session.location.toLowerCase().includes(searchTermState.toLowerCase())
             })
         setFilteredSessions(searchedSessions)
     },
@@ -77,7 +80,7 @@ export const SessionList = ({ searchTermState }) => {
                 
                 <section className="session_list" key={`session--${session.id}`}>
                         
-                            <div className="date">Date: {new Date (session.date).toLocaleDateString()}</div>
+                            <div className="date">Date: {new Date(session.date).toLocaleDateString()}</div>
                             <div className="location">Location: {session.location}</div>
                             <div className="name">Client's Name: {session.clientName}</div>
                             <div className="email">Email: {session.email}</div>

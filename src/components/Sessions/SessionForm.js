@@ -81,7 +81,7 @@ export const SessionForm = () => {
               type="date"
               className="form-control"
               placeholder="Choose Date"
-              value={session.date}
+              value= {session.date}
               onChange={(evt) => {
                 const copy = { ...session }; //created a copy of existing state
                 copy.date = evt.target.value; //to modify
