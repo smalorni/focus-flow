@@ -28,6 +28,17 @@ export const SessionList = ({ searchTermState }) => {
           "eventType": "Engagement"
         }
     */
+        useEffect(
+            () => {
+                fetch(`http://localhost:8088/sessions?_expand=eventType`)
+                .then(response => response.json())
+                .then((sessionArray) => { 
+                     setSessions(sessionArray)//passes what you want the new value to be
+                })
+            },
+            [] //when this array is empty, you are observing initial component state
+    
+        )
 
     useEffect(
         () => {
@@ -37,22 +48,10 @@ export const SessionList = ({ searchTermState }) => {
                  setFilteredSessions(sessionArray)//passes what you want the new value to be
             })
         },
-        [sessions] //when this array is empty, you are observing initial component state
+        [sessions] 
 
     )
 
-    useEffect(
-        () => {
-            fetch(`http://localhost:8088/sessions?_expand=eventType`)
-            .then(response => response.json())
-            .then((sessionArray) => { 
-                 setSessions(sessionArray)//passes what you want the new value to be
-            })
-        },
-        [] //when this array is empty, you are observing initial component state
-
-    )
-    
     //Need useEffect for searchState - to search for certain sessions
     useEffect(
         () => {
