@@ -65,10 +65,11 @@ export const SessionList = ({ searchTermState }) => {
     },
         [ searchTermState ]
 )
+
+
  
         //add new session button, need navigate hook above
     return <>
-        <button onClick={() => navigate("/sessions")}>View All Sessions</button>
         <button onClick={() => navigate("/session/create")}>Add New Session</button>
         <h2 className="sessionForm_title">List of Photo Sessions</h2>
             <article className="sessions">
@@ -80,7 +81,7 @@ export const SessionList = ({ searchTermState }) => {
                 
                 <section className="session_list" key={`session--${session.id}`}>
                         
-                            <div className="date">Date: {new Date(session.date).toLocaleDateString()}</div>
+                            <div className="date">Date: {new Date(session.date).toLocaleDateString('en-US', { timeZone: 'UTC'})}</div>
                             <div className="location">Location: {session.location}</div>
                             <div className="name">Client's Name: {session.clientName}</div>
                             <div className="email">Email: {session.email}</div>
@@ -88,7 +89,8 @@ export const SessionList = ({ searchTermState }) => {
                             <div className="notes">Notes: {session.notes}</div>
                     </section>
                     <footer>
-                        <Link to={`/sessions/${session.id}/edit`}><button className="edit_btn">EDIT</button></Link>
+                        <Link to={`/sessions/${session.id}/edit`}><button className="edit-btn">EDIT</button></Link>
+                      <button className="delete-btn">DELETE</button>
                     </footer>
                     </>
                     })
