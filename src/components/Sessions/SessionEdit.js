@@ -11,13 +11,12 @@ export const SessionEdit = () => {
             eventTypeId: "",
             notes: "",
           })
-       
-
+    //cancel button - set state
+    //const [ cancel, cancelSession ] = useState("")
     const { sessionId } = useParams()
     const navigate = useNavigate()
     //need to pull eventTypes API in order for .map to work
     const [eventTypes, setEventTypes] = useState([])
-
 
     //fetch sessions data
     useEffect(() => {
@@ -58,7 +57,22 @@ export const SessionEdit = () => {
             })
     }
 
-    return <form className="editForm">
+/*const deleteButton = () => { 
+    return <button 
+    /*onClick={() => {
+     fetch(`http://localhost:8088/diveRequests/${sessionId}`, {
+        method: "DELETE",
+    })
+        .then(() => {
+        navigate("/sessions")
+        })
+    }}
+    >Delete</button>
+}*/
+    
+
+    return <>
+        <form className="editForm">
             <h2 className="editForm__title">Update Photo Session</h2>
             <fieldset>
                 <div className="form-group">
@@ -135,6 +149,7 @@ export const SessionEdit = () => {
             <div className="form-group">
                 <label htmlFor="eventType">Event Type:</label>
                 <select
+                    value={session.eventTypeId}
                     onChange={(evt) => {
                     const copy = { ...session }; //created a copy of existing state
                     copy.eventTypeId = parseInt(evt.target.value) //to modify
@@ -170,7 +185,10 @@ export const SessionEdit = () => {
             onClick={(clickEvent) => editButtonClick(clickEvent)}
             className="edit-btn">
             Save
-        </button>
-        
+        </button> 
+
+        <button onClick={() => navigate("/sessions")}>Cancel</button>
+       
     </form>
+    </>
 }

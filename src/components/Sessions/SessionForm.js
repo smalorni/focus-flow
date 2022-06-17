@@ -45,7 +45,7 @@ export const SessionForm = () => {
     //Need send data to API
 
       const sessionToSendToAPI = {
-        date: new Date(session.date).toLocaleDateString('en-US', { timeZone: 'UTC' }),
+        date: (session.date),
         location: session.location,
         clientName: session.clientName,
         email: session.email,
