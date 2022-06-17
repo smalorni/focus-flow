@@ -57,19 +57,6 @@ export const SessionEdit = () => {
             })
     }
 
-/*const deleteButton = () => { 
-    return <button 
-    /*onClick={() => {
-     fetch(`http://localhost:8088/diveRequests/${sessionId}`, {
-        method: "DELETE",
-    })
-        .then(() => {
-        navigate("/sessions")
-        })
-    }}
-    >Delete</button>
-}*/
-    
 
     return <>
         <form className="editForm">
