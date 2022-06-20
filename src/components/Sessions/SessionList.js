@@ -3,6 +3,8 @@ import "./Sessions.css";
 import { useNavigate } from "react-router-dom";
 import { Link } from "react-router-dom";
 
+//Note 6/17: ******* It's working while logged in, edit is fine, just add session part is not working*****
+
 export const SessionList = ({ searchTermState }) => {
   //set state with initial value of empty array
   const [sessions, setSessions] = useState([]);
@@ -10,29 +12,15 @@ export const SessionList = ({ searchTermState }) => {
   const [filteredSessions, setFilteredSessions] = useState([]);
   const navigate = useNavigate();
 
-  /*const localFlowUser = localStorage.getItem("flow_user")
-    const flowUserObject = JSON.parse(localFlowUser)*/
+    const localFlowUser = localStorage.getItem("flow_user")
+    const flowUserObject = JSON.parse(localFlowUser)
 
-  /* fetch existing api data, all details and event type included{
-        "id": 1,
-        "date": "08-12-2022",
-        "location": "West Pavilion Park - Chicago, Illinois",
-        "clientName": "Bobby Walsh and Jennifer Davidson",
-        "email": "Walsh_Davidson@gmail.com",
-        "eventTypeId": 3,
-        "notes": "Bring 50mm lens, take some shots by the water fountain",
-        "userId": 1,
-        "eventType": {
-          "id": 3,
-          "eventType": "Engagement"
-        }
-    */
   //Get all sessions
   const getAllSessions = () => {
-    fetch(`http://localhost:8088/sessions?_expand=eventType`)
+    fetch(`http://localhost:8088/sessions?_expand=eventType&userId=${flowUserObject.id}`)
       .then((response) => response.json())
       .then((sessionArray) => {
-        setSessions(sessionArray); //passes what you want the new value to be
+        setSessions(sessionArray);
       });
   };
   useEffect(() => {
@@ -41,12 +29,13 @@ export const SessionList = ({ searchTermState }) => {
 
   [],
   )
+
   //Fetch for search
   useEffect(() => {
-    fetch(`http://localhost:8088/sessions?_expand=eventType`)
+    fetch(`http://localhost:8088/sessions?_expand=eventType&userId=${flowUserObject.id}`)
       .then((response) => response.json())
       .then((sessionArray) => {
-        setFilteredSessions(sessionArray); //passes what you want the new value to be
+        setFilteredSessions(sessionArray);
       });
   }, [sessions]);
 
@@ -67,7 +56,6 @@ export const SessionList = ({ searchTermState }) => {
     setFilteredSessions(searchedSessions);
   }, [searchTermState]);
 
-  /*<button className="delete-btn" onClick={deleteButtonClick}>DELETE</button>*/
 
   //add new session button, need navigate hook above
   return (
@@ -79,7 +67,7 @@ export const SessionList = ({ searchTermState }) => {
       <article className="sessions">
         <ul>
           {filteredSessions.map((session) => {
-            return (
+            return(
               <div key={`session-${session.id}`}>
                 <section
                   className="session_list"

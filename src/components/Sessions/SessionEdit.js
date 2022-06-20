@@ -11,8 +11,7 @@ export const SessionEdit = () => {
             eventTypeId: "",
             notes: "",
           })
-    //cancel button - set state
-    //const [ cancel, cancelSession ] = useState("")
+    
     const { sessionId } = useParams()
     const navigate = useNavigate()
     //need to pull eventTypes API in order for .map to work

@@ -3,31 +3,31 @@ import { useNavigate } from "react-router-dom";
 
 //Goal: create a form, for creating new objects. Once POST operation is completed, navigate user back to list of all sessions.
 
+
 export const SessionForm = () => {
   const [session, updateSession] = useState({
-    date: "",
-    location: "",
-    clientName: "",
-    email: "",
-    eventTypeId: "",
-    notes: "",
+    "date": "",
+    "location": "",
+    "clientName": "",
+    "email": "",
+    "eventTypeId": 0,
+    "notes": "",
+    "userId": 0
   })
   
- const navigate = useNavigate()
-
+  const navigate = useNavigate()
+  
   const [eventTypes, setEventTypes] = useState([])
-
-  /*const localFlowUser = localStorage.getItem("flow_user")
-  const flowUserObject = JSON.parse(localFlowUser)*/
-
-
-
-    //Create object to be saved to API
-   
-
-    //Fetch existing data
-
-   useEffect(() => {
+  
+  const localFlowUser = localStorage.getItem("flow_user")
+    const flowUserObject = JSON.parse(localFlowUser)
+    //added below
+    const userId = flowUserObject.id
+    //console.log(userId)
+  
+  //Fetch existing data for eventTypes, need it for drop down menu items to appear
+  
+  useEffect(() => {
       fetch(`http://localhost:8088/eventTypes`)
         .then((response) => response.json())
         .then((eventTypeArray) => {
@@ -51,6 +51,7 @@ export const SessionForm = () => {
         email: session.email,
         eventTypeId: parseInt(session.eventTypeId),
         notes: session.notes,
+        userId: parseInt(userId)
       }
       //Post request to JSON server, when completed, navigate user back to session list - route found in application views.js
 
