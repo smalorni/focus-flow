@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react"
 import { useNavigate, useParams } from "react-router-dom"
+import "./EditForm.css"
 
 export const SessionEdit = () => {
     
@@ -154,7 +155,7 @@ export const SessionEdit = () => {
             <fieldset>
             <div className="form-group">
                 <label htmlFor="notes">Notes:</label>
-                    <textarea
+                <textarea className="text_box"
                 placeholder="Enter Notes"
                 value={session.notes}
                 onChange={(evt) => {
@@ -173,7 +174,7 @@ export const SessionEdit = () => {
             Save
         </button> 
 
-        <button onClick={() => navigate("/sessions")}>Cancel</button>
+        <button className="cancel-btn" onClick={() => navigate("/sessions")}>Cancel</button>
        
     </form>
     </>

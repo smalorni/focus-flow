@@ -1,8 +1,8 @@
 
 export const SessionSearch = ({ setterFunction }) => {
     return (
-        <div className="searchBar">
-        <input
+        <div>
+        <input className="session_search_bar"
             onChange={
                 (changeEvent) => {
                     setterFunction(changeEvent.target.value)

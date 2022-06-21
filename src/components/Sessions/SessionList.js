@@ -3,7 +3,6 @@ import "./Sessions.css";
 import { useNavigate } from "react-router-dom";
 import { Link } from "react-router-dom";
 
-//Note 6/17: ******* It's working while logged in, edit is fine, just add session part is not working*****
 
 export const SessionList = ({ searchTermState }) => {
   //set state with initial value of empty array
@@ -60,10 +59,10 @@ export const SessionList = ({ searchTermState }) => {
   //add new session button, need navigate hook above
   return (
     <>
-      <button onClick={() => navigate("/session/create")}>
-        Add New Session
+      <button className="new_session" onClick={() => navigate("/session/create")}>
+        ADD NEW SESSION
       </button>
-      <h2 className="sessionForm_title">List of Photo Sessions</h2>
+      <h2 className="sessionForm_title">Upcoming Photo Sessions</h2>
       <article className="sessions">
         <ul>
           {filteredSessions.map((session) => {
@@ -73,6 +72,9 @@ export const SessionList = ({ searchTermState }) => {
                   className="session_list"
                   key={`session--${session.id}`}
                 >
+                  <div>
+                  <img src={session.eventType.img_url} className="image" />
+                  </div>
                   <div className="date">
                     Date:{" "}
                     {new Date(session.date).toLocaleDateString("en-US", {
@@ -90,6 +92,7 @@ export const SessionList = ({ searchTermState }) => {
                   <div className="notes">Notes: {session.notes}</div>
                 </section>
                 <footer>
+                  <div className="buttons">
                   <Link to={`/sessions/${session.id}/edit`}>
                     <button className="edit-btn">EDIT</button>
                   </Link>
@@ -105,6 +108,7 @@ export const SessionList = ({ searchTermState }) => {
                   >
                     DELETE
                   </button>
+                  </div>
                 </footer>
               </div>
             );

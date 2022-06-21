@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
+import "./AddForm.css"
 
 //Goal: create a form, for creating new objects. Once POST operation is completed, navigate user back to list of all sessions.
 
@@ -152,7 +153,7 @@ export const SessionForm = () => {
         <fieldset>
           <div className="form-group">
             <label htmlFor="eventType">Event Type:</label>
-            <select
+            <select className="select_picker"
               onChange={(evt) => {
                 const copy = { ...session }; //created a copy of existing state
                 copy.eventTypeId = parseInt(evt.target.value) //to modify
@@ -171,7 +172,7 @@ export const SessionForm = () => {
         <fieldset>
           <div className="form-group">
             <label htmlFor="notes">Notes:</label>
-            <textarea
+            <textarea className="text_box"
               placeholder="Enter Notes"
               value={session.notes}
               onChange={(evt) => {
@@ -183,8 +184,8 @@ export const SessionForm = () => {
           </div>
         </fieldset>
 
-        <button onClick={(clickEvent) => handleSaveButtonClick(clickEvent)}>
-          Submit Session
+        <button className="submit-form" onClick={(clickEvent) => handleSaveButtonClick(clickEvent)}>
+          SUBMIT SESSION
         </button>
       </form>
     )

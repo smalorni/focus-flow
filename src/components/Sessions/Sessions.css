@@ -1,13 +1,84 @@
-/* add CSS for Session list */
+/* Add CSS for Session list */
 .sessions {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
 }
 
 .session_list {
-    background-color: rgb(210, 196, 196);
-    border: 2px solid rgb(40, 1, 1);
-    padding: 0.7rem;
-    margin: 0.5rem 0 ;
+    display: block;
+    background: #ffff;
+    color:  #1f1f20;
+    font-family: "Roboto";
+    padding: 1rem;
+    margin: 1rem;
     list-style-type: none;
+    border-radius: 10px;
+    width: 450px;
+    height: 600px;
+    
+
+/* CSS ANIMATED PROFILE CARD */
+}
+
+ul {
+    display: flex;
+    flex-wrap: wrap;
+    font-size: 16px;
+}
+
+h2 {
+    font-size: 30px;
+    margin: 2rem;
+}
+/* LIST OF SESSIONS BUTTONS */
+.edit-btn, .delete-btn, .cancel-btn {
+    background: linear-gradient(120deg, #89f7fe 0%, #66a6ff 100%);
+    border-radius: 12px;
+    border: 1px solid rgb(44, 153, 241);
+    color: black;
+    margin: 0.5rem;
+    font-size: 16px;
+    padding: 0.4rem;
+    font-family: "Oswald Bold", sans-serif;
+    letter-spacing: 1px;
+    width: 8rem;
+}
+
+.buttons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* ADD A NEW SESSION BUTTON */
+.new_session {
+    background: linear-gradient(120deg, #89f7fe 0%, #66a6ff 100%);
+    border-radius: 12px;
+    border: 1px solid rgb(44, 153, 241);
+    color: black;
+    width: 13rem;
+    font-size: 16px;
+    padding: 0.4rem;
+    margin-top: 1rem;
+    font-family: "Oswald Bold", sans-serif;
+    letter-spacing: 2px;
+}
+/* SEARCH BAR */
+.session_search_bar {
+    border-radius: 10px;
+    width: 50rem;
+    height: 2rem;
+    color: black;
+    font-size: 18px;
+}
+
+/* URL IMAGES FROM JSON */
+.image {
+    height: 350px;
+    width: 300px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 1rem;
+    padding-top: 2rem;
 }

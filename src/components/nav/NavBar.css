@@ -7,8 +7,16 @@
 .navbar__item {
     flex-basis: 20%;
     list-style-type: none;
+    color: #ffff;
 }
 
 .navbar__logout {
+    margin-left: auto;
+}
+
+.navbar__link__home, .navbar__link__sessions, .navbar__link__logout {
+    color: #ffff;
+    text-decoration: none;
+    font-size: 18px;
     margin-left: auto;
 }

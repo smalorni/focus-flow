@@ -3,12 +3,16 @@ import { SessionContainer } from "../Sessions/SessionContainer";
 import { SessionForm } from "../Sessions/SessionForm";
 import { SessionEdit } from "../Sessions/SessionEdit";
 import { SessionSearch } from "../Sessions/SessionSearch";
+//import { Camera } from './Images/Homepage/Camera_Image.jpg';
+
+//<div><img src={Camera} /></div>
+
 
 export const ApplicationViews = () => {
     return <Routes>
                 <Route path="/" element={
                 <>
-                    <h1 className="title_main">Focus Flow</h1>
+                    
                     <Outlet />
                 </>
             }>    

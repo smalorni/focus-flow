@@ -43,6 +43,7 @@ fieldset {
 
 .container--login {
     text-align: center;
+    margin-top: 10rem;
 }
 
 .form--login {
@@ -50,9 +51,15 @@ fieldset {
     z-index: 1;
     min-height: 25rem;
     min-width: 45rem;
-    background-color: hsla(0,0%,100%,0.40);
+    background-color: rgb(189, 185, 185);
     background-blend-mode: overlay;
     background-repeat: no-repeat;
+}
+
+.welcome {
+    font-family: "Oswald", sans-serif;
+    color: black;
+    text-align: center;
 }
 
 .button--close {
