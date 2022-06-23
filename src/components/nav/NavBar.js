@@ -4,10 +4,23 @@ import "./NavBar.css"
 export const NavBar = () => {
     const navigate = useNavigate()
 
+//took out "active in li className"
     return (
-        <ul className="navbar">
-            <li className="navbar__item active">
+        <nav className="navbar">
+            <li className="navbar__item">
+                <img className="logo" src={process.env.PUBLIC_URL + "/Images/Focus-Flow-Logo.PNG"} alt ="logo" />
+            </li>
+
+            <li className="navbar__item">
+                <Link className="navbar__link__home" to="/home">Home</Link>
+            </li>
+
+            <li className="navbar__item">
                 <Link className="navbar__link__sessions" to="/sessions">Photo Sessions</Link>
+            </li>
+
+            <li className="navbar__item">
+                <Link className="navbar__link__board" to="/board">Flow Board</Link>
             </li>
 
             {
@@ -19,9 +32,7 @@ export const NavBar = () => {
                 }}>Logout</Link>
             </li>
             :""
-            }    
-        </ul>
+            }   
+        </nav>
     )
 }
-
-// Note: took out home nav link on 06/21

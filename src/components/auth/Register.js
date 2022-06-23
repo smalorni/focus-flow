@@ -1,6 +1,7 @@
 import { useState } from "react"
 import { useNavigate } from "react-router-dom"
 import "./Login.css"
+import "./Register.css"
 
 export const Register = (props) => {
     const [customer, setCustomer] = useState({
@@ -54,8 +55,9 @@ export const Register = (props) => {
 
     return (
         <main style={{ textAlign: "center" }}>
+            <div className="register-section">
             <form className="form--login" onSubmit={handleRegister}>
-                <h1 className="h3 mb-3 font-weight-normal">Please sign up to join Focus Flow</h1>
+                <h1 className="create-an-account-title">Please Create An Account</h1>
                 <fieldset>
                     <label htmlFor="name"> Name </label>
                     <input onChange={updateCustomer}
@@ -71,9 +73,10 @@ export const Register = (props) => {
                 </fieldset>
                 
                 <fieldset>
-                    <button type="submit"> Create My Account </button>
+                    <button className="create-my-account-btn" type="submit"> CREATE MY ACCOUNT</button>
                 </fieldset>
             </form>
+            </div>
         </main>
     )
 }

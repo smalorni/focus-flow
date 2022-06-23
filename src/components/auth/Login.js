@@ -21,7 +21,7 @@ export const Login = () => {
                         id: user.id,
                     }))
 
-                    navigate("/")
+                    navigate("/home")
                 }
                 else {
                     window.alert("Invalid login")
@@ -34,7 +34,7 @@ export const Login = () => {
             <section>
                 <form className="form--login" onSubmit={handleLogin}>
                     <h1 className="welcome">Welcome Back Photographer</h1>
-                    <h3>Please sign in</h3>
+                    <h3 className="sign-in-heading">Please sign in</h3>
                     <fieldset>
                         <label htmlFor="inputEmail"> Email </label>
                         <input type="email"
@@ -45,14 +45,15 @@ export const Login = () => {
                             required autoFocus />
                     </fieldset>
                     <fieldset>
-                        <button type="submit">
-                            Sign In
+                        <button className="sign-in-btn" type="sign-in">
+                            SIGN IN
                         </button>
                     </fieldset>
                 </form>
             </section>
             <section className="link--register">
-                <Link to="/register">Don't have an account? Sign up</Link>
+                <Link to="/register">
+                    <p className="account">Don't have an account? Join Focus Flow</p></Link>
             </section>
         </main>
     )

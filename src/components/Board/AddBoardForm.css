@@ -1,20 +1,19 @@
-/* EDIT FORM CSS */
-
-.editForm__title {
-    text-align: center;
-}
-
-.editForm {
+.boardForm {
     background-color: rgb(13, 54, 86);
     box-shadow: rgba(213, 213, 215, 0.606) 0px 8px 16px -2px, rgba(213, 213, 215, 0.606) 0px 8px 16px -2px;
     padding: 6rem;
     position: absolute;
-    top: 70%;
+    top: 60%;
     left: 50%;
     transform: translate(-50%, -50%);
     width: 50rem;
-    height: 50rem; 
-    border-radius: 1rem;
+    height: 30rem; 
+    border-radius: 1rem; 
+}
+
+/* TITLE FOR ADD A NEW PIN */
+.boardForm_title {
+    text-align: center;
 }
 
 label {
@@ -22,27 +21,20 @@ label {
     font-weight: bold;
 }
 
-/* NOTES AREA */
+/* COMMENTS AREA */
 textarea {
     background-color: #f8f8f8;
     resize: none;
-  }
+}
 
+/* NEEDED A CLASS TO CHANGE FONT COLOR IN TEXT AREA */
 .text_box {
     color: #4c545a;
     font-size:16px;
 }
 
-  /* SELECT OPTION */
-.select_picker {
-    background: #ffff;
-    color:#485056;
-    font-family: "Roboto";
-    width: 12rem;
-    margin: 0.5rem;
-}
-
-.cancel, .save {
+/* PIN NEW IDEA BUTTON */
+.submit-pin {
     background: linear-gradient(120deg, #89f7fe 0%, #66a6ff 100%);
     border-radius: 12px;
     border: 1px solid rgb(44, 153, 241);
@@ -52,10 +44,10 @@ textarea {
     padding: 0.4rem;
     font-family: "Oswald Bold", sans-serif;
     letter-spacing: 1px;
-    width: 10rem;
+    width: 11rem;
 }
 
-.buttons {
+.add-board-btns {
     display: flex;
     justify-content: center;
     align-items: center;

@@ -59,10 +59,11 @@ export const SessionList = ({ searchTermState }) => {
   //add new session button, need navigate hook above
   return (
     <>
+      
+      <h2 className="sessionForm_title">Upcoming Photo Sessions</h2>
       <button className="new_session" onClick={() => navigate("/session/create")}>
         ADD NEW SESSION
       </button>
-      <h2 className="sessionForm_title">Upcoming Photo Sessions</h2>
       <article className="sessions">
         <ul>
           {filteredSessions.map((session) => {

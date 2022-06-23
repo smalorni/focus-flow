@@ -1,15 +1,14 @@
 .sessionForm {
-    background: #423d4c;
-    box-shadow: rgba(213, 213, 215, 0.606) 0px 13px 27px -5px, rgba(213, 213, 215, 0.606) 0px 8px 16px -8px;
-    padding: 5rem;
-    height: 30rem;
-    margin-top: 3rem;
-    margin-left: 8rem;
-    margin-bottom: 4rem;
-    font-size: 16px;
+    background-color: rgb(13, 54, 86);
+    box-shadow:rgba(213, 213, 215, 0.606) 0px 8px 16px -2px, rgba(213, 213, 215, 0.606) 0px 8px 16px -2px;
+    padding: 6rem;
+    position: absolute;
+    top: 70%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 50rem;
+    height: 50rem; 
     border-radius: 1rem;
-    width: 80rem;
-    height: 50rem;   
 }
 
 /* TITLE FOR ADD A NEW SESSION */
@@ -24,14 +23,8 @@ label {
 
 /* NOTES AREA */
 textarea {
-  width: 100%;
-  height: 150px;
-  padding: 12px 20px;
-  box-sizing: border-box;
-  border-radius: 4px;
-  background-color: #f8f8f8;
-  font-size: 16px;
-  resize: none;
+    background-color: #f8f8f8;
+    resize: none;
 }
 
 /* NEEDED A CLASS TO CHANGE FONT COLOR IN TEXT AREA */
@@ -46,17 +39,20 @@ textarea {
     border-radius: 12px;
     border: 1px solid rgb(44, 153, 241);
     color: black;
-    width: 12rem;
+    margin: 0.5rem;
     font-size: 16px;
-    letter-spacing: 2px;
-    color: black
+    padding: 0.4rem;
+    font-family: "Oswald Bold", sans-serif;
+    letter-spacing: 1px;
+    width: 11rem;
 }
 
 /* SELECT OPTION */
 .select_picker {
     background: #ffff;
-    color:rgb(22, 22, 22);
+    color:#485056;
     font-family: "Roboto";
     width: 12rem;
+    margin: 0.5rem;
 }
 

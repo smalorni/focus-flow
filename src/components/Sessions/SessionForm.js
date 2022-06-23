@@ -187,6 +187,12 @@ export const SessionForm = () => {
         <button className="submit-form" onClick={(clickEvent) => handleSaveButtonClick(clickEvent)}>
           SUBMIT SESSION
         </button>
+        <button className="cancel-btn" onClick={() => navigate("/sessions")}>CANCEL</button>
+        <br></br>
+        <br></br>
+        <br></br>
+        <br></br>
+        
       </form>
     )
   }

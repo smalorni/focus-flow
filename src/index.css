@@ -4,10 +4,13 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   /* MAIN BACKGROUND COLOR */
-  background-color: #252525
+  background: #232931
+  
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+/*#252525*/

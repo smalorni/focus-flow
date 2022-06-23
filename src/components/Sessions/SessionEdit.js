@@ -135,7 +135,7 @@ export const SessionEdit = () => {
             <fieldset>
             <div className="form-group">
                 <label htmlFor="eventType">Event Type:</label>
-                <select
+                <select className="select_picker"
                     value={session.eventTypeId}
                     onChange={(evt) => {
                     const copy = { ...session }; //created a copy of existing state
@@ -168,14 +168,15 @@ export const SessionEdit = () => {
             </fieldset>
             
 
-        <button
-            onClick={(clickEvent) => editButtonClick(clickEvent)}
-            className="edit-btn">
-            Save
+        <button className="save" onClick={(clickEvent) => editButtonClick(clickEvent)}>
+            SAVE
         </button> 
 
-        <button className="cancel-btn" onClick={() => navigate("/sessions")}>Cancel</button>
-       
+        <button className="cancel" onClick={() => navigate("/sessions")}>CANCEL</button>
+        <br></br>
+        <br></br>
+        <br></br>
+        <br></br>
     </form>
     </>
 }
