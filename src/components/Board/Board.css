@@ -1,6 +1,7 @@
 .boards {
     display: flex;
     flex-direction: row;
+    margin: 0;
 }
 
 .board_list {
@@ -18,12 +19,12 @@
     position: relative;
     top: 0;
     transition: top ease 0.3s;
+    margin-left: 4rem;
 }
 
 .board_list:hover {
         top: -20px;
     }
-
 
 ul {
     display: flex;
@@ -33,12 +34,14 @@ ul {
 
 h2 {
     font-size: 30px;
-    margin: 2rem;
+    margin: 1rem;
+    text-align: center;
 }
 
 .comments {
-    margin-left: 1.6rem;
+    margin-left: 1rem;
     color: #ffff;
+    width: 410px;
 }
 
 /* LIST OF SESSIONS BUTTONS */
@@ -56,12 +59,9 @@ h2 {
 }
 
 .board-buttons {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
+    margin-left: 8rem;
+    padding-top: 0.5rem;
 }
-
 
 /* ADD A NEW IDEA BUTTON */
 .new_pin {
@@ -75,9 +75,9 @@ h2 {
     margin-top: 3rem;
     font-family: "Oswald Bold", sans-serif;
     letter-spacing: 2px;
-    margin-left: 4rem;
+    margin: 1rem;
+    margin-left: 9rem;
 }
-
 .board_img {
     display: flex;
     margin-left: auto;

@@ -84,7 +84,7 @@ export const BoardForm = () => {
         </fieldset>
         <div className="add-board-btns">
         <button className="submit-pin" onClick={(clickEvent) => handleSaveButtonClick(clickEvent)}>
-          PIN A NEW IDEA
+          PIN IDEA
         </button>
         <button className="cancel-btn" onClick={() => navigate("/board")}>CANCEL</button>
         </div>

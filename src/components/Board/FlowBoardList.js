@@ -35,8 +35,10 @@ export const FlowBoardList = () => {
         <>
             
             <h2 className="boardForm_title">My Flow Board</h2>
-            <button className="new_pin" onClick={() => navigate("/board/create")}>PIN A NEW IDEA</button>
-            <article className="boards">
+            <div className="pin-btn">
+                <button className="new_pin" onClick={() => navigate("/board/create")}>📌 PIN A NEW IDEA</button>
+            </div>
+                <article className="boards">
                 <ul>
                     {boards.map((board) => {
                         return <>

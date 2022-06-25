@@ -4,13 +4,12 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   /* MAIN BACKGROUND COLOR */
-  background: #232931
-  
+  background: #232931;
+  box-sizing: border-box;
+  padding: 0%; 
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
-
-/*#252525*/

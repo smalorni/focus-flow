@@ -46,7 +46,7 @@ export const EditFlowBoard = () => {
 
     return <>
         <form className="boardForm">
-          <h2 className="boardForm_title">Edit A New Idea</h2>
+          <h2 className="boardForm_title">Edit Idea</h2>
           <fieldset>
             <div className="form-group" key={board.id}>
               <label htmlFor="url-link">URL:</label>

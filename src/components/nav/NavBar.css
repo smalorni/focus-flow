@@ -2,22 +2,22 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    flex-wrap: nowrap;
-    margin: 0;
-    padding: 0;
-
+    margin-bottom: 1rem;
+    padding: 1rem;
 }
 
 .navbar__item {
-    display: inline-block;
-    flex-basis: 30%;
-    list-style-type: none;
+    margin: 2rem;
+    padding: 0.5rem;
+    list-style: none;
     color: #ffff;
     text-align: center;
+    letter-spacing: 0.5px;
+    border-radius: 3px;  
 }
 
 .navbar__logout {
-    margin-left: auto;
+    letter-spacing: 0.5px;
 }
 
 .navbar__link__home, .navbar__link__sessions, .navbar__link__logout, .navbar__link__board {
@@ -26,9 +26,18 @@
     font-size: 18px;   
 }
 
+ .navbar__item:hover {
+    background-color: #1c87d4;
+    border-radius: 5px;
+    transition: 0.2s ease; 
+} 
+
 .logo {
     display: inline-block;
     width: 200px;
     height: 200px;
     padding: 0 10px;
 }
+
+
+
