@@ -7,6 +7,8 @@ import { HomePage } from "../Home/Homepage";
 import { BoardForm } from "../Board/AddBoardForm";
 import { FlowBoardList} from "../Board/FlowBoardList";
 import { EditFlowBoard } from "../Board/EditBoardForm";
+import { BoardContainer } from "../Board/BoardContainer";
+import { BoardSearch } from "../Board/BoardSearch";
 
 
 export const ApplicationViews = () => {
@@ -24,10 +26,10 @@ export const ApplicationViews = () => {
                 <Route path="session/create" element={ <SessionForm />} />
                 <Route path="sessions/:sessionId/edit" element={ <SessionEdit />} />
                 <Route path="board/create" element={ <BoardForm /> } />
-                <Route path="board" element={ <FlowBoardList /> } />
                 <Route path="board/:boardId/edit" element= { <EditFlowBoard />} />
+                <Route path="board" element={ <BoardContainer /> } />
+                <Route path="board" element={ <BoardSearch /> } />
 
             </Route>
     </Routes>
 }
-

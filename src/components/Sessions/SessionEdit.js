@@ -167,12 +167,14 @@ export const SessionEdit = () => {
             </div>
             </fieldset>
             
-
+        <div className="session-edit-buttons">
         <button className="save" onClick={(clickEvent) => editButtonClick(clickEvent)}>
             SAVE
         </button> 
 
         <button className="cancel" onClick={() => navigate("/sessions")}>CANCEL</button>
+        </div>
+        <br></br>
         <br></br>
         <br></br>
         <br></br>

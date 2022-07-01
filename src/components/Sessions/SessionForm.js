@@ -183,11 +183,13 @@ export const SessionForm = () => {
             />
           </div>
         </fieldset>
-
+        <div className="session-add-buttons">
         <button className="submit-form" onClick={(clickEvent) => handleSaveButtonClick(clickEvent)}>
           SUBMIT SESSION
         </button>
         <button className="cancel-btn" onClick={() => navigate("/sessions")}>CANCEL</button>
+        </div>
+        <br></br>
         <br></br>
         <br></br>
         <br></br>

@@ -62,7 +62,7 @@ export const SessionList = ({ searchTermState }) => {
       
       <h2 className="sessionForm_title">Upcoming Photo Sessions</h2>
       <button className="new_session" onClick={() => navigate("/session/create")}>
-        ADD NEW SESSION
+        ➕ NEW SESSION
       </button>
       <article className="sessions">
         <ul>

@@ -79,7 +79,7 @@ export const EditFlowBoard = () => {
               />
             </div>
           </fieldset>
-        <div className="edit-board-btns">
+        <div className="edit-board-buttons">
         <button
             onClick={(clickEvent) => editButtonClick(clickEvent)}
             className="edit-flowBoard-btn">
