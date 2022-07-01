@@ -38,7 +38,7 @@ export const SessionForm = () => {
         []
     )
 
-      //submit button
+    //submit button
   const handleSaveButtonClick = (event) => {
     event.preventDefault()
 
@@ -160,7 +160,7 @@ export const SessionForm = () => {
                 updateSession(copy)
               }}
             >
-              <option key={0}>Select An Event Type</option>
+              <option key={0}>Select Event Type</option>
               {
               eventTypes.map((eventType) => {
                 return <option key={eventType.id} value={eventType.id}>{eventType.eventType}</option>

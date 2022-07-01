@@ -16,7 +16,7 @@ export const SessionList = ({ searchTermState }) => {
 
   //Get all sessions
   const getAllSessions = () => {
-    fetch(`http://localhost:8088/sessions?_expand=eventType&userId=${flowUserObject.id}`)
+    fetch(`http://localhost:8088/sessions?_expand=eventType&_sort=date&userId=${flowUserObject.id}`)
       .then((response) => response.json())
       .then((sessionArray) => {
         setSessions(sessionArray);
@@ -29,9 +29,10 @@ export const SessionList = ({ searchTermState }) => {
   [],
   )
 
-  //Fetch for search
+  //Fetch purpose: to sort sessions by date and be able to still search for specific session(s)
   useEffect(() => {
     fetch(`http://localhost:8088/sessions?_expand=eventType&userId=${flowUserObject.id}`)
+      fetch ( `http://localhost:8088/sessions?_expand=eventType&_sort=date&userId=${flowUserObject.id}`)
       .then((response) => response.json())
       .then((sessionArray) => {
         setFilteredSessions(sessionArray);
