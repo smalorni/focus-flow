@@ -2,19 +2,21 @@
 
 .editForm__title {
     text-align: center;
+    font-size: 20px;
 }
 
 .editForm {
     background-color: rgb(13, 54, 86);
     box-shadow: rgba(213, 213, 215, 0.606) 0px 8px 16px -2px, rgba(213, 213, 215, 0.606) 0px 8px 16px -2px;
-    padding: 6rem;
+    padding: 3rem;
     position: absolute;
     top: 70%;
     left: 50%;
     transform: translate(-50%, -50%);
-    width: 50rem;
-    height: 50rem; 
+    width: 40rem;
+    height: 40rem; 
     border-radius: 1rem;
+    font-family: 10px;
 }
 
 label {
@@ -25,12 +27,11 @@ label {
 /* NOTES AREA */
 textarea {
     background-color: #f8f8f8;
-    resize: none;
   }
 
 .text_box {
     color: #4c545a;
-    font-size:16px;
+    font-size: 12px;
 }
 
   /* SELECT OPTION */
@@ -48,20 +49,15 @@ textarea {
     border: 1px solid rgb(44, 153, 241);
     color: black;
     margin: 0.5rem;
-    font-size: 16px;
+    font-size: 12px;
     padding: 0.4rem;
     font-family: "Oswald Bold", sans-serif;
     letter-spacing: 1px;
-    width: 10rem;
+    width: 8rem;
 }
 
 .session-edit-buttons {
     display: flex;
     justify-content: center;
     align-items: center;
-}
-
-fieldset {
-    font-size: 16px;
-    font-weight: bold;
 }

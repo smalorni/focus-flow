@@ -1,14 +1,14 @@
 
 fieldset {
     min-width: 0;
-    padding: 1rem 0;
+    padding: 0.5rem;
     margin: 0;
     border: 0;
 }
 
 h3 {
     font-family: "Oswald", sans-serif;
-    font-size: 1.3rem;
+    font-size: 20px;
 }
 
 
@@ -33,7 +33,7 @@ h3 {
     width: 94%;
     height: calc(1.5em + .75rem + 2px);
     padding: .375rem .75rem;
-    font-size: 1rem;
+    font-size: 12px;
     font-weight: 400;
     line-height: 1.5;
     color: #495057;
@@ -49,7 +49,7 @@ h3 {
 .welcome {
     font-family: "Oswald", sans-serif;
     color: #ffff;
-    font-size: 2.5rem;
+    font-size: 30px;
     text-align: center;
 }
 
@@ -73,7 +73,7 @@ h3 {
     border-radius: 12px;
     border: 1px solid rgb(44, 153, 241);
     color: black;
-    font-size: 14px;
+    font-size: 12px;
     padding: 0.2rem;
     font-family: "Oswald Bold", sans-serif;
     letter-spacing: 1px;

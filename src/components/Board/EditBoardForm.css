@@ -5,16 +5,16 @@
 }
 
 .editBoard {
-    background-color: rgb(13, 54, 86);
-    box-shadow: rgba(213, 213, 215, 0.606) 0px 8px 16px -2px, rgba(213, 213, 215, 0.606) 0px 8px 16px -2px;
-    padding: 6rem;
-    position: absolute;
-    top: 60%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 50rem;
-    height: 30rem; 
-    border-radius: 1rem; 
+  background-color: rgb(13, 54, 86);
+  box-shadow: rgba(213, 213, 215, 0.606) 0px 8px 16px -2px, rgba(213, 213, 215, 0.606) 0px 8px 16px -2px;
+  padding: 3rem;
+  position: absolute;
+  top: 55%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 33rem;
+  height: 25rem; 
+  border-radius: 1rem; 
 }
 
 label {
@@ -30,7 +30,7 @@ textarea {
     box-sizing: border-box;
     border-radius: 4px;
     background-color: #f8f8f8;
-    font-size: 16px;
+    font-size: 12px;
     resize: none;
   }
 

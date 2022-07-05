@@ -6,8 +6,8 @@
 .camera-image {
     display: flex;
     flex-wrap: wrap;
-    width: 62rem;
-    height: 62rem;
+    width: 37rem;
+    height: 37rem;
     opacity: 40%;
     margin-left: 3rem;
 } 
@@ -20,7 +20,7 @@
     transform: translateY(-30%);
     top: 40%;
     color: #ffff;
-    font-size: 11rem;
+    font-size: 6.5rem;
     
 }
 

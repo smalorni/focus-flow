@@ -1,14 +1,18 @@
 .boardForm {
     background-color: rgb(13, 54, 86);
     box-shadow: rgba(213, 213, 215, 0.606) 0px 8px 16px -2px, rgba(213, 213, 215, 0.606) 0px 8px 16px -2px;
-    padding: 6rem;
+    padding: 3rem;
     position: absolute;
-    top: 60%;
+    top: 55%;
     left: 50%;
     transform: translate(-50%, -50%);
-    width: 50rem;
-    height: 30rem; 
+    width: 33rem;
+    height: 25rem; 
     border-radius: 1rem; 
+}
+
+fieldset {
+    font-size: 12px;
 }
 
 /* TITLE FOR ADD A NEW PIN */
@@ -19,17 +23,17 @@
 label {
     color: white;
     font-weight: bold;
+    font-size: 12px;
 }
 
 /* COMMENTS AREA */
 textarea {
     width: 100%;
-    height: 150px;
     padding: 12px 20px;
     box-sizing: border-box;
     border-radius: 4px;
     background-color: #f8f8f8;
-    font-size: 16px;
+    font-size: 12px;
     resize: none;
 }
 
@@ -40,11 +44,11 @@ textarea {
     border: 1px solid rgb(44, 153, 241);
     color: black;
     margin: 0.5rem;
-    font-size: 16px;
+    font-size: 12px;
     padding: 0.4rem;
     font-family: "Oswald Bold", sans-serif;
     letter-spacing: 1px;
-    width: 11rem;
+    width: 8rem;
 }
 
 /* BUTTONS */

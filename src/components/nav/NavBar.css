@@ -23,7 +23,7 @@
 .navbar__link__home, .navbar__link__sessions, .navbar__link__logout, .navbar__link__board {
     color: #ffff;
     text-decoration: none;
-    font-size: 18px;   
+    font-size: 14px;   
 }
 
  .navbar__item:hover {
@@ -34,8 +34,8 @@
 
 .logo {
     display: inline-block;
-    width: 200px;
-    height: 200px;
+    width: 120px;
+    height: 120px;
     padding: 0 10px;
 }
 
