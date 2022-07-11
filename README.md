@@ -1,5 +1,5 @@
 # Focus Flow
-![Exported Logo](/public/Images/Focus-Flow-Logo.PNG)
+![Logo](/public/Images/Focus-Flow-Logo.PNG width="20" height="20")
 
 ## What is Focus Flow?
 
@@ -8,11 +8,11 @@ It is a React application that helps photographers to maintain a list of upcomin
 My friends and I have done photography on the side and there was never an app that fulfilled our needs. I used a calendar app to keep track of information and Pinterest to save ideas that would be great for photo sessions. I developed Focus Flow to combine both features and to streamline the process.
 
 ## ERD
-![Exported ERD](/public/Images/ERD-Focus-Flow.png)
+![ERD](/public/Images/ERD-Focus-Flow.png)
 
 ## WIREFRAME - FIGMA
-![Exported WireFrames for Sessions](/public/Images/Sessions%20-%20Wireframe.png)
-![Exported Wireframe for Flow Board](/public/Images/Flow%20Board%20Wireframe.png)
+![WireFrame - Sessions](/public/Images/Sessions%20-%20Wireframe.png)
+![Wireframe - Flow Board](/public/Images/Flow%20Board%20Wireframe.png)
 
 # Getting Started with Create React App
 
