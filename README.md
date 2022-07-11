@@ -1,4 +1,3 @@
-# Focus Flow
 <img src="/public/Images/Focus-Flow-Logo.PNG" width="300" height="300"/>
 
 ## What is Focus Flow?
