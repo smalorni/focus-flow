@@ -1,5 +1,5 @@
 # Focus Flow
-<img src="/public/Images/Focus-Flow-Logo.PNG" width="100" height="100"/>
+<img src="/public/Images/Focus-Flow-Logo.PNG" width="300" height="300"/>
 
 ## What is Focus Flow?
 
