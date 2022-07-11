@@ -1,5 +1,5 @@
 # Focus Flow
-![Logo](/public/Images/Focus-Flow-Logo.PNG width="20" height="20")
+![Logo](/public/Images/Focus-Flow-Logo.PNG)
 
 ## What is Focus Flow?
 
