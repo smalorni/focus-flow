@@ -4,10 +4,13 @@
 
 A React CRUD application that helps photographers to maintain a list of upcoming photo sessions and allows photographers to save online photo ideas to the flow board. Photographers can add, delete and edit photo sessions and photo ideas. The photo sessions are sorted by dates. Photographers can also search for a specific photo session by month, client's name, event type and location. For the flow board, photographers can search by any word in comments to find a specific idea. 
 
-My friends and I have done photography on the side and there was never an app that fulfilled our needs. I used a calendar app to keep track of information and Pinterest to save ideas that would be great for photo sessions. I developed Focus Flow to combine both features and to streamline the process for photographers.
+My friends and I have done photography on the side and there was never an app that fulfilled our needs. In the past, I used a calendar app to keep track of information and Pinterest to save ideas that would be great for photo sessions. I developed Focus Flow to combine both features and to streamline the process for photographers.
 
 ## DEMO
-![Demo] (/public/Videos/Focus-Flow-2.mp4)
+![DEMO] 
+<div style="position: relative; padding-bottom: 62.5%; height: 0;">
+<iframe src="https://www.loom.com/embed/7e58cfa2f89041f2b4a63319d66a9075" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"></iframe>
+</div>
 
 ## ERD
 ![ERD](/public/Images/ERD-Focus-Flow.png)
