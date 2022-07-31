@@ -7,7 +7,9 @@ It is a React application that helps photographers to maintain a list of upcomin
 My friends and I have done photography on the side and there was never an app that fulfilled our needs. In the past, I used a calendar app to keep track of information and Pinterest to save ideas that would be great for photo sessions. I developed Focus Flow to combine both features and to streamline the process for photographers.
 
 ## DEMO
-<div style="position: relative; padding-bottom: 62.5%; height: 0;"><iframe src="https://www.loom.com/embed/7e58cfa2f89041f2b4a63319d66a9075" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"></iframe></div>
+<div style="position: relative; padding-bottom: 62.5%; height: 0;">
+<iframe src="https://www.loom.com/embed/7e58cfa2f89041f2b4a63319d66a9075" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"></iframe>
+</div>
 
 ## ERD
 ![ERD](/public/Images/ERD-Focus-Flow.png)
