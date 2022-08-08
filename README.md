@@ -8,7 +8,7 @@ My friends and I have done photography on the side and there was never an app th
 
 ## DEMO
 <div style="position: relative; padding-bottom: 62.5%; height: 0;">
-https://www.loom.com/embed/7e58cfa2f89041f2b4a63319d66a9075
+https://youtu.be/f3wASV-Bqnw
 </div>
 
 ## ERD
