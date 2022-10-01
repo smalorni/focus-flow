@@ -1,16 +1,24 @@
 <img src="/public/Images/Focus-Flow-Logo.PNG" width="300" height="300"/>
 
+## DEMO
+👇 Please feel free to watch the demo of Focus Flow below.
+<p>https://youtu.be/f3wASV-Bqnw</p>
+
 ## What is Focus Flow?
 
-A React application that helps photographers to maintain a list of upcoming photo sessions and also allow photographers to save online photo ideas to the flow board. Photographers can add, delete and edit photo sessions and photo ideas. The sessions are sorted by dates. Photographers can also search for a specific photo session by month, client's name, event type and location. For the flow board, photographers can search by any word in comments to find a specific idea. 
+A React application that helps photographers to maintain a list of upcoming photo sessions and also allow photographers to save online photo ideas to the flow board.
 
-My friends and I have done photography on the side and there was never an app that fulfilled our needs. In the past, I used a calendar app to keep track of information and Pinterest to save ideas that would be great for photoshoots. I developed Focus Flow to combine both features and to streamline the process for photographers. Please check out my demo video to see how the app works. Thank you for checking out my app! 
 My friends and I have done photography on the side and there was never an app that fulfilled our needs. In the past, I used a calendar app to keep track of information and Pinterest to save ideas that would be great for photo sessions. I developed Focus Flow to combine both features and to streamline the process for photographers.
 
-## DEMO
-<div style="position: relative; padding-bottom: 62.5%; height: 0;">
-https://youtu.be/f3wASV-Bqnw
-</div>
+## Features
+
+* User can log in or register to create a new account
+* User can add, delete or edit photo sessions
+* User can add, delete or edit photo ideas
+* User can add url address to upload photo on Flow Board
+* User can search for a specific photo session by month, client's name, event type or location
+* Photo sessions are sorted by dates in chronological order
+* User can search on Flow Board by any word in comments to find a specific idea
 
 ## ERD
 ![ERD](/public/Images/ERD-Focus-Flow.png)
@@ -19,74 +27,12 @@ https://youtu.be/f3wASV-Bqnw
 ![WireFrame - Sessions](/public/Images/Sessions%20-%20Wireframe.png)
 ![Wireframe - Flow Board](/public/Images/Flow%20Board%20Wireframe.png)
 
-# Getting Started with Create React App
+## Tech Stack 
+React and CSS
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
-
-## Available Scripts
-
-In the project directory, you can run:
-
-### `npm start`
-
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
-
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
-
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
-# focus-flow
+## Installation 
+1. Clone the repository: `git clone git@github.com:smalorni/focus-flow.git`
+2. cd into directory `focus-flow`
+3. Follow API instructions for <a href="https://github.com/smalorni/focus-flow-api" target="_blank">focus-flow-api</a> to run json-server
+4. Return back to focus-flow in terminal and run `npm install`
+5. Run `npm start` and you should see localhost:3000/login in browser
