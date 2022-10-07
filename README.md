@@ -20,13 +20,6 @@ My friends and I have done photography on the side and there was never an app th
 * Photo sessions are sorted by dates in chronological order
 * User can search on Flow Board by any word in comments to find a specific idea
 
-## ERD
-![ERD](/public/Images/ERD-Focus-Flow.png)
-
-## WIREFRAME - FIGMA
-![WireFrame - Sessions](/public/Images/Sessions%20-%20Wireframe.png)
-![Wireframe - Flow Board](/public/Images/Flow%20Board%20Wireframe.png)
-
 ## Tech Stack 
 * Javascript/React
 * CSS
@@ -38,3 +31,13 @@ My friends and I have done photography on the side and there was never an app th
 3. Follow API instructions for <a href="https://github.com/smalorni/focus-flow-api" target="_blank">focus-flow-api</a> to run json-server
 4. Return back to focus-flow in terminal and run `npm install`
 5. Run `npm start` and you should see localhost:3000/login in browser
+
+## ERD
+![ERD](/public/Images/ERD-Focus-Flow.png)
+
+## WIREFRAME - FIGMA
+Link to Figma 👇
+<p>https://www.figma.com/file/xoD3Wd7RPzf9NFjdRIKe0N/Focus-Flow---Client?node-id=0%3A1</p>
+
+![WireFrame - Sessions](/public/Images/Sessions%20-%20Wireframe.png)
+![Wireframe - Flow Board](/public/Images/Flow%20Board%20Wireframe.png)
